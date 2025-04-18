@@ -1,0 +1,29 @@
+{
+  "name": "smart-pump-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc && node scripts/copy-data.mjs",
+    "start": "node dist/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hono/node-server": "^1.14.1",
+    "argon2": "^0.41.1",
+    "hono": "^4.7.7",
+    "lowdb": "7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "copyfiles": "^2.4.1",
+    "mkdirp": "^3.0.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
