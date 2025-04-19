@@ -6,6 +6,11 @@ API para el proyecto Smart Pump.
 
 Esta API proporciona los endpoints necesarios para la aplicación Smart Pump. Actualmente utiliza una base de datos simple basada en archivos JSON (LowDB) para almacenar datos de usuario.
 
+## Captura de pantalla
+<img width="1002" alt="Screenshot 2025-04-18 at 19 22 34" src="https://github.com/user-attachments/assets/2154a19d-c28b-4b12-b2aa-9e37a365507b" />
+
+
+
 ## Instalación
 
 1.  Clona este repositorio.
