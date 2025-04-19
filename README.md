@@ -45,6 +45,21 @@ Para iniciar el servidor con el código compilado:
 pnpm run start
 ```
 
+## Estructura del Proyecto
+
+-   `src/`: Código fuente de la API (TypeScript).
+    -   `db/`: Lógica de inicialización y acceso a la base de datos (LowDB).
+    -   `routes/`: Definición de las rutas de la API (Hono).
+    -   `types/`: Definiciones de tipos TypeScript.
+    -   `index.ts`: Punto de entrada principal de la aplicación.
+-   `data/`: Archivos de datos (ej. `users.json`).
+-   `scripts/`: Scripts auxiliares (ej. `copy-data.mjs`).
+-   `dist/`: Código compilado (generado por `pnpm run build`).
+-   `package.json`: Metadatos del proyecto y dependencias.
+-   `tsconfig.json`: Configuración del compilador TypeScript.
+-   `pnpm-lock.yaml`: Archivo de bloqueo de dependencias de pnpm.
+
+
 ## Scripts
 
 -   `dev`: Inicia el servidor de desarrollo con `tsx`.
@@ -76,21 +91,10 @@ curl http://localhost:3001/user -H "Authorization: Bearer $TOKEN"
 
 *(Reemplaza `tu_token_jwt_aqui` con el token real obtenido)*
 
-
 ## Licencia
 
-Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles (actualmente no incluido).
+MIT
 
-## Estructura del Proyecto
+---
 
--   `src/`: Código fuente de la API (TypeScript).
-    -   `db/`: Lógica de inicialización y acceso a la base de datos (LowDB).
-    -   `routes/`: Definición de las rutas de la API (Hono).
-    -   `types/`: Definiciones de tipos TypeScript.
-    -   `index.ts`: Punto de entrada principal de la aplicación.
--   `data/`: Archivos de datos (ej. `users.json`).
--   `scripts/`: Scripts auxiliares (ej. `copy-data.mjs`).
--   `dist/`: Código compilado (generado por `pnpm run build`).
--   `package.json`: Metadatos del proyecto y dependencias.
--   `tsconfig.json`: Configuración del compilador TypeScript.
--   `pnpm-lock.yaml`: Archivo de bloqueo de dependencias de pnpm.
+Desarrollado por Josue
