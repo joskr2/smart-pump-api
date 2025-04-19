@@ -11,27 +11,27 @@ async function startServer() {
   try {
     await initializeDatabase();
 
-    console.log(
-      "--- DEBUG: Estado de DB justo después de initializeDatabase() ---"
-    );
-    if (db.data && Array.isArray(db.data.users)) {
-      console.log(
-        `Número de usuarios cargados en db.data.users: ${db.data.users.length}`
-      );
-      if (db.data.users.length > 0) {
-        console.log(
-          `Email del primer usuario cargado: ${db.data.users[0].email}`
-        );
-      }
-    } else {
-      console.error(
-        "ERROR: db.data o db.data.users no está disponible o no es un array después de la inicialización!"
-      );
-      console.log("Valor actual de db.data:", db.data);
-    }
-    console.log(
-      "--------------------------------------------------------------"
-    );
+    // console.log(
+    //   "--- DEBUG: Estado de DB justo después de initializeDatabase() ---"
+    // );
+    // if (db.data && Array.isArray(db.data.users)) {
+    //   console.log(
+    //     `Número de usuarios cargados en db.data.users: ${db.data.users.length}`
+    //   );
+    //   if (db.data.users.length > 0) {
+    //     console.log(
+    //       `Email del primer usuario cargado: ${db.data.users[0].email}`
+    //     );
+    //   }
+    // } else {
+    //   console.error(
+    //     "ERROR: db.data o db.data.users no está disponible o no es un array después de la inicialización!"
+    //   );
+    //   console.log("Valor actual de db.data:", db.data);
+    // }
+    // console.log(
+    //   "--------------------------------------------------------------"
+    // );
 
     const app = new Hono();
 
@@ -46,7 +46,7 @@ async function startServer() {
     );
 
     app.get("/", (c) =>
-      c.json({ message: "API SMART Pump (Versión Texto Plano - Insegura)" })
+      c.json({ message: "API SMART Pump" })
     );
     app.route("/auth", authRoutes);
     app.route("/user", userRoutes);
